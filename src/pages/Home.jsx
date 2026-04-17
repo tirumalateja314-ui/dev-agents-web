@@ -113,7 +113,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full mb-6"
                 style={{ background: 'var(--color-accent-muted)', color: 'var(--color-accent)', border: '1px solid rgba(240, 147, 26, 0.25)', fontFamily: 'var(--font-mono)' }}>
                 <Terminal size={12} weight="bold" />
-                8 agents &nbsp;·&nbsp; inside VS Code &nbsp;·&nbsp; free to use
+                9 agents &nbsp;·&nbsp; inside VS Code &nbsp;·&nbsp; free to use
               </span>
             </motion.div>
 
@@ -134,7 +134,7 @@ export default function Home() {
             <motion.p className="text-sm leading-relaxed mb-9 max-w-[30rem]"
               style={{ color: 'var(--color-tertiary)' }}
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.35, delay: 0.15 }}>
-              Describe a task. 8 agents handle requirements, architecture, code, tests, and review — inside VS Code, with your approval at every gate.
+              Describe a task. 9 agents handle requirements, architecture, code, tests, and review — inside VS Code, with your approval at every gate.
             </motion.p>
 
             <motion.div className="flex flex-wrap items-center gap-3 mb-10"

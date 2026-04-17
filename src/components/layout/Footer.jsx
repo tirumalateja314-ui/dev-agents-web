@@ -19,7 +19,7 @@ export default function Footer() {
             </div>
             <p className="text-sm text-[var(--color-tertiary)] leading-relaxed">
               Your AI development team, inside VS Code.
-              8 agents. 8 phases. Full control.
+              9 agents. 8 phases. Full control.
             </p>
           </div>
 

@@ -15,6 +15,7 @@ const CONTEXT_FILES = [
   { file: 'development-log.md', writtenBy: 'Developer', readBy: ['Tester', 'Reviewer', 'Coordinator'], persists: false, desc: 'What was built: files created/modified, decisions made, edge cases handled.' },
   { file: 'test-results.md', writtenBy: 'Tester', readBy: ['Reviewer', 'Coordinator'], persists: false, desc: 'All tests written, coverage summary, edge cases tested, any failures found.' },
   { file: 'review-report.md', writtenBy: 'Reviewer', readBy: ['Coordinator', 'Developer'], persists: false, desc: 'Code review verdict: issues found (if any), severity, fix suggestions.' },
+  { file: 'research-findings.md', writtenBy: 'Researcher', readBy: ['All agents'], persists: false, desc: 'Web research findings — sourced, rated, and verified against our tech stack. Accumulates across phases.' },
   { file: 'git-operations.md', writtenBy: 'Git Manager', readBy: ['Coordinator'], persists: false, desc: 'Branch name, commits, push status, MR link and description.' },
   { file: 'task-status.md', writtenBy: 'Coordinator', readBy: ['All agents'], persists: false, desc: 'Current phase, pending approvals, overall task progress. Your dashboard.' },
 ];
@@ -309,7 +310,7 @@ export default function HowItWorks() {
         </h1>
         <p className="text-base leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
           Every task — from a simple fix to a new feature — flows through the same structured pipeline.
-          8 phases, 8 agents, 4 approval gates. You're in control at every step.
+          8 phases, 9 agents, 4 approval gates. You're in control at every step.
         </p>
       </div>
 
@@ -427,7 +428,7 @@ export default function HowItWorks() {
         </h2>
         <div className="grid sm:grid-cols-2 gap-3">
           {[
-            { to: '/agents', label: 'Meet the Agents', desc: 'Detailed profiles for all 8 agents.' },
+            { to: '/agents', label: 'Meet the Agents', desc: 'Detailed profiles for all 9 agents.' },
             { to: '/guide/approvals', label: 'Approval Gates Guide', desc: "What to check and what to say at each gate." },
             { to: '/guide/giving-tasks', label: 'Giving Tasks', desc: 'How to describe tasks for best results.' },
             { to: '/examples/simple-feature', label: 'See a Full Example', desc: 'Watch a complete task from start to finish.' },

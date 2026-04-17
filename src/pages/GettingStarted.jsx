@@ -53,7 +53,7 @@ const INSTALL_STEPS = [
     n: 2,
     title: 'Copy .github/ to your project root',
     body: 'Place the entire .github/ folder in the root of your project. The structure should look like this:',
-    code: 'your-project/\n├── .github/\n│   ├── agents/\n│   │   ├── coordinator.md\n│   │   ├── story-analyst.md\n│   │   └── ... (8 agents)\n│   ├── prompts/\n│   │   └── process-story.prompt.md\n│   └── context/       ← created automatically\n├── src/\n└── package.json',
+    code: 'your-project/\n├── .github/\n│   ├── agents/\n│   │   ├── coordinator.md\n│   │   ├── story-analyst.md\n│   │   └── ... (9 agents)\n│   ├── prompts/\n│   │   └── process-story.prompt.md\n│   └── context/       ← created automatically\n├── src/\n└── package.json',
     callout: null,
   },
   {
@@ -293,7 +293,7 @@ export default function GettingStarted() {
         <div className="grid sm:grid-cols-2 gap-3">
           {[
             { to: '/how-it-works', label: 'How It Works', desc: 'Understand the 8 phases and how agents collaborate.' },
-            { to: '/agents', label: 'Meet the Agents', desc: 'Learn what each of the 8 agents does.' },
+            { to: '/agents', label: 'Meet the Agents', desc: 'Learn what each of the 9 agents does.' },
             { to: '/guide/giving-tasks', label: 'Giving Tasks', desc: 'How to describe tasks for the best results.' },
             { to: '/reference/cheatsheet', label: 'Command Cheat Sheet', desc: 'Every phrase the Coordinator understands.' },
           ].map((item) => (

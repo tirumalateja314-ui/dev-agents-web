@@ -15,7 +15,7 @@ export default function AgentOverview() {
           Meet the agents
         </h1>
         <p className="text-base leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
-          8 AI agents, each an expert at their role. You only ever talk to the Coordinator —
+          9 AI agents, each an expert at their role. You only ever talk to the Coordinator —
           it orchestrates everything else behind the scenes.
         </p>
       </div>

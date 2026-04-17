@@ -29,6 +29,7 @@ export const navigation = [
       { title: 'Coordinator', path: '/agents/coordinator' },
       { title: 'Story Analyst', path: '/agents/story-analyst' },
       { title: 'Codebase Explorer', path: '/agents/codebase-explorer' },
+      { title: 'Researcher', path: '/agents/researcher' },
       { title: 'Architect Planner', path: '/agents/architect' },
       { title: 'Developer', path: '/agents/developer' },
       { title: 'Tester', path: '/agents/tester' },

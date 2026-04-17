@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { agents } from '../../data/agents';
 
-// Layout: 8 agents evenly spaced in a circle around a central "You" node
+// Layout: 9 agents evenly spaced in a circle around a central "You" node
 const RADIUS = 130;       // circle radius
 const CX = 180;           // SVG center X
 const CY = 180;           // SVG center Y

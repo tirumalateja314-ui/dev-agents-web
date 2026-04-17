@@ -99,6 +99,41 @@ Phase 2/8: EXPLORATION
       { scenario: 'Conflicting patterns found', response: 'Documents both patterns and flags it — Architect decides which to follow.' },
     ],
   },
+  researcher: {
+    analogy: 'Like a research assistant who, when anyone on the team hits a wall, goes and finds the answer from official docs, Stack Overflow, CVE databases, and changelogs — then hands back a verified, sourced answer that matches your exact tech stack.',
+    inputs: ['A specific question from any agent (error, comparison, API docs, etc.)', 'Our tech stack context from codebase-intel.md', 'Existing research from research-findings.md (cache check)'],
+    outputs: ['Sourced findings with reliability ratings (🟢🟡🟠🔴)', 'Comparison tables for technology choices', 'Security vulnerability alerts (flagged immediately)'],
+    sampleOutput: `RESEARCH: Node.js 18 fetch not available in Jest
+REQUESTED BY: Developer
+DEPTH: QUICK
+TYPE: Error Resolution
+
+## Summary
+Node.js 18's native fetch is not available in the Jest test
+environment by default. You need to polyfill with whatwg-fetch
+or configure Jest globals.
+
+## Finding
+- Source: https://jestjs.io/docs/configuration#globals
+- Date: 2026
+- Reliability: 🟢 OFFICIAL
+- Fix: Add to jest.config: globals: { fetch: global.fetch }
+  or install whatwg-fetch as a dev dependency.
+
+## Sources
+1. jestjs.io/docs/configuration — 🟢 OFFICIAL`,
+    tips: [
+      'The Researcher uses 3 depth levels: QUICK (1-2 searches), MODERATE (3-5), DEEP (5-10). Most requests are QUICK.',
+      'Every finding comes with a source URL and reliability rating — nothing is unsourced.',
+      'It checks existing research first, so the same question won\'t be researched twice with different answers.',
+      'Security findings skip the normal queue and go straight to you as CRITICAL alerts.',
+    ],
+    edgeCases: [
+      { scenario: 'No reliable answer found', response: 'Honestly reports: "Could not find a reliable answer after N searches. Queries tried: [list]. Suggest: [alternative]."' },
+      { scenario: 'Sources contradict each other', response: 'Presents both sides with evidence and reliability ratings. Flags as RESOLVED, UNRESOLVED, or EVOLVING.' },
+      { scenario: 'Found solution is for wrong version', response: 'Flags the mismatch: "⚠️ This is for v3, we use v4" and continues searching for a version-matched answer.' },
+    ],
+  },
   architect: {
     analogy: 'Like a senior engineer whiteboarding the entire solution before anyone writes a single line of code — every file, every interface, every dependency mapped out so the Developer just executes the plan.',
     inputs: ['requirements.md from Story Analyst', 'codebase-intel.md from Codebase Explorer', 'Your preferences if provided'],
