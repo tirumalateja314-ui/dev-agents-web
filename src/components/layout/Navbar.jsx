@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { List, X, MagnifyingGlass } from '@phosphor-icons/react';
 import { useState } from 'react';
 import ThemeToggle from '../utility/ThemeToggle';
+import DevAgentLogo from '../utility/DevAgentLogo';
 
 export default function Navbar({ theme, toggleTheme, onSearchOpen, onSidebarToggle, sidebarOpen }) {
   return (
@@ -26,13 +27,7 @@ export default function Navbar({ theme, toggleTheme, onSearchOpen, onSidebarTogg
         </button>
 
         <Link to="/" className="flex items-center gap-2.5 no-underline">
-          <div
-            className="w-7 h-7 rounded-md flex items-center justify-center
-                        bg-[var(--color-accent)] text-white text-sm font-bold"
-            style={{ fontFamily: 'var(--font-heading)' }}
-          >
-            D
-          </div>
+          <DevAgentLogo size={28} />
           <span
             className="text-[var(--color-primary)] font-semibold text-base hidden sm:block"
             style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}

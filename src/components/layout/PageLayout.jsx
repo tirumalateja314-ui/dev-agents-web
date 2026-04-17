@@ -3,16 +3,27 @@ import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import SearchModal from '../utility/SearchModal';
 
 export default function PageLayout({ children, theme, toggleTheme }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
 
-  // Close sidebar on route change (mobile)
+  // Close sidebar on route change; scroll to section or top
   useEffect(() => {
     setSidebarOpen(false);
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    const timer = setTimeout(() => {
+      const segments = location.pathname.split('/').filter(Boolean);
+      const sectionId = segments[segments.length - 1];
+      const el = sectionId ? document.getElementById(sectionId) : null;
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }, 50);
+    return () => clearTimeout(timer);
   }, [location.pathname]);
 
   // Keyboard shortcut: Ctrl+K for search
@@ -67,6 +78,7 @@ export default function PageLayout({ children, theme, toggleTheme }) {
       )}
 
       <Footer />
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </div>
   );
 }

@@ -331,7 +331,7 @@ export default function HowItWorks() {
       </div>
 
       {/* Section: The 8 Phases */}
-      <section className="mb-12">
+      <section id="phases" className="mb-12">
         <h2 className="text-xl font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
           The 8 phases
         </h2>
@@ -374,7 +374,7 @@ export default function HowItWorks() {
       <div className="mb-12" style={{ borderTop: '1px solid var(--color-border)' }} />
 
       {/* Section: Context Files */}
-      <section className="mb-12">
+      <section id="context-files" className="mb-12">
         <h2 className="text-xl font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
           Context files — the shared brain
         </h2>
@@ -403,7 +403,7 @@ export default function HowItWorks() {
       <div className="mb-12" style={{ borderTop: '1px solid var(--color-border)' }} />
 
       {/* Section: Approval gates */}
-      <section className="mb-12">
+      <section id="approval-gates" className="mb-12">
         <h2 className="text-xl font-semibold mb-2" style={{ fontFamily: 'var(--font-heading)' }}>
           Approval gates — you're always in control
         </h2>

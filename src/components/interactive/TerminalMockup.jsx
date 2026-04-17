@@ -60,10 +60,10 @@ function renderLine(line) {
 }
 
 export default function TerminalMockup() {
-  // Keep only VISIBLE_LINES completed lines — acts as a sliding window
   const [lines, setLines]         = useState([]);
   const [typing, setTyping]       = useState(null);
   const [scriptIdx, setScriptIdx] = useState(0);
+  const [fading, setFading]       = useState(false);
   const timerRef = useRef(null);
 
   useEffect(() => {
@@ -76,6 +76,7 @@ export default function TerminalMockup() {
     async function run() {
       setLines([]);
       setTyping(null);
+      setFading(false);
 
       for (let i = 0; i < SCRIPT.length; i++) {
         if (cancelled) return;
@@ -99,11 +100,17 @@ export default function TerminalMockup() {
       }
 
       await sleep(LOOP_PAUSE);
-      if (!cancelled) {
-        setLines([]);
-        setTyping(null);
-        setScriptIdx((n) => n + 1);
-      }
+      if (cancelled) return;
+
+      // Fade out the whole pane, then reset
+      setFading(true);
+      await sleep(500);
+      if (cancelled) return;
+      setLines([]);
+      setTyping(null);
+      setFading(false);
+      await sleep(200);
+      if (!cancelled) setScriptIdx((n) => n + 1);
     }
 
     run();
@@ -143,8 +150,8 @@ export default function TerminalMockup() {
       <div
         className="px-5 py-4"
         style={{
-          height: '222px',      /* fixed — hero stays stable */
-          overflow: 'hidden',   /* no scrollbar, no page scroll leak */
+          height: '222px',
+          overflow: 'hidden',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'flex-end',
@@ -152,6 +159,8 @@ export default function TerminalMockup() {
           fontSize: '0.74rem',
           lineHeight: '1.55',
           fontFamily: 'var(--font-mono)',
+          opacity: fading ? 0 : 1,
+          transition: 'opacity 0.45s ease',
         }}
       >
         <AnimatePresence initial={false}>
@@ -160,7 +169,7 @@ export default function TerminalMockup() {
               key={`${scriptIdx}-${line.type}-${idx}`}
               initial={{ opacity: 0, y: 6 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
+              exit={{ opacity: 0, transition: { duration: 0 } }}
               transition={{ duration: 0.15 }}
             >
               {renderLine(line)}

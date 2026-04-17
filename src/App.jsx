@@ -40,7 +40,6 @@ export default function App() {
           <Route path="/getting-started/jira-setup" element={<GettingStarted />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/how-it-works/phases" element={<HowItWorks />} />
-          <Route path="/how-it-works/agents" element={<HowItWorks />} />
           <Route path="/how-it-works/context-files" element={<HowItWorks />} />
           <Route path="/how-it-works/approval-gates" element={<HowItWorks />} />
           <Route path="/agents" element={<AgentOverview />} />

@@ -233,7 +233,7 @@ export default function GettingStarted() {
       <div className="mb-12" style={{ borderTop: '1px solid var(--color-border)' }} />
 
       {/* Section: Installation */}
-      <section className="mb-12">
+      <section id="install" className="mb-12">
         <div className="flex items-center gap-2.5 mb-2">
           <FolderOpen size={18} weight="duotone" style={{ color: 'var(--color-accent)' }} />
           <h2 className="text-xl font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -252,7 +252,7 @@ export default function GettingStarted() {
       <div className="mb-12" style={{ borderTop: '1px solid var(--color-border)' }} />
 
       {/* Section: First task */}
-      <section className="mb-12">
+      <section id="first-task" className="mb-12">
         <div className="flex items-center gap-2.5 mb-2">
           <Terminal size={18} weight="duotone" style={{ color: 'var(--color-accent)' }} />
           <h2 className="text-xl font-semibold" style={{ fontFamily: 'var(--font-heading)' }}>

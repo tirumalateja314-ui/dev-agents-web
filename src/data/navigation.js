@@ -17,7 +17,6 @@ export const navigation = [
     children: [
       { title: 'The Big Picture', path: '/how-it-works' },
       { title: 'The 8 Phases', path: '/how-it-works/phases' },
-      { title: 'Meet the Agents', path: '/how-it-works/agents' },
       { title: 'Context Files', path: '/how-it-works/context-files' },
       { title: 'Approval Gates', path: '/how-it-works/approval-gates' },
     ],

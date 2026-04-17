@@ -4,10 +4,10 @@ const STORAGE_KEY = 'devagent-docs-theme';
 
 export function useTheme() {
   const [theme, setTheme] = useState(() => {
-    if (typeof window === 'undefined') return 'dark';
+    if (typeof window === 'undefined') return 'light';
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'light' || stored === 'dark') return stored;
-    return 'dark'; // Dark mode is the primary experience
+    return 'light'; // Always default to light until user explicitly changes it
   });
 
   useEffect(() => {

@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import DevAgentLogo from '../utility/DevAgentLogo';
 
 export default function Footer() {
   return (
@@ -8,13 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2.5 mb-4">
-              <div
-                className="w-7 h-7 rounded-md flex items-center justify-center
-                            bg-[var(--color-accent)] text-white text-sm font-bold"
-                style={{ fontFamily: 'var(--font-heading)' }}
-              >
-                D
-              </div>
+              <DevAgentLogo size={28} />
               <span
                 className="text-[var(--color-primary)] font-semibold"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em' }}
@@ -73,7 +68,7 @@ export default function Footer() {
         <div className="mt-10 pt-6 border-t border-[var(--color-border)]
                         flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--color-tertiary)]">
-            DevAgent Documentation. Built with React, Vite, and Tailwind CSS.
+            &copy; {new Date().getFullYear()} DevAgent. All rights reserved.
           </p>
         </div>
       </div>
