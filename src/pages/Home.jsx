@@ -95,7 +95,7 @@ const COMPARISON = [
 ];
 
 const STATS = [
-  { value: '8', label: 'AI agents' },
+  { value: '9', label: 'AI agents' },
   { value: '4', label: 'Approval gates' },
   { value: '~5 min', label: 'To install' },
   { value: '0', label: 'Config needed' },
@@ -316,7 +316,7 @@ export default function Home() {
                   style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE TEAM</p>
                 <h2 className="text-xl font-bold leading-tight mb-2"
                   style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
-                  8 specialists. You talk to one.
+                  9 specialists. You talk to one.
                 </h2>
                 <p className="text-sm max-w-[28rem]" style={{ color: 'var(--color-secondary)' }}>
                   You only ever message the Coordinator. It assigns the right agent for each task automatically.
