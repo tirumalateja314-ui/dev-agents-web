@@ -106,7 +106,7 @@ export default function Home() {
     <div>
 
       {/* HERO */}
-      <section className="max-w-[72rem] mx-auto px-6 pt-16 pb-12">
+      <section className="max-w-[60rem] mx-auto px-6 pt-16 pb-12">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-center">
           <div>
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
@@ -173,7 +173,7 @@ export default function Home() {
 
       {/* STATS BAR */}
       <SectionWrapper>
-        <div className="max-w-[72rem] mx-auto px-6">
+        <div className="max-w-[60rem] mx-auto px-6">
           <div className="rounded-xl border py-5 px-8"
             style={{ borderColor: 'var(--color-border)', background: 'var(--color-layer-1)' }}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -192,7 +192,7 @@ export default function Home() {
       {/* PAIN SECTION */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[72rem] mx-auto px-6 py-14">
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
             <div className="max-w-[34rem] mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE REAL COST</p>
@@ -227,7 +227,7 @@ export default function Home() {
       {/* SCENARIOS */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[72rem] mx-auto px-6 py-14">
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
             <div className="max-w-[34rem] mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>SOUND FAMILIAR?</p>
@@ -263,7 +263,7 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[72rem] mx-auto px-6 py-14">
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
             <div className="max-w-[34rem] mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE PIPELINE</p>
@@ -309,7 +309,7 @@ export default function Home() {
       {/* AGENTS */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[72rem] mx-auto px-6 py-14">
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
             <div className="flex items-end justify-between mb-8">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest mb-3"
@@ -339,7 +339,7 @@ export default function Home() {
       {/* COMPARISON */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[72rem] mx-auto px-6 py-14">
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest mb-3"
@@ -376,7 +376,7 @@ export default function Home() {
       {/* QUOTE */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)', background: 'var(--color-layer-1)' }}>
-          <div className="max-w-[72rem] mx-auto px-6 py-12 text-center">
+          <div className="max-w-[60rem] mx-auto px-6 py-12 text-center">
             <div className="max-w-[40rem] mx-auto">
               <p className="text-xl lg:text-2xl font-bold leading-snug mb-5"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.025em', color: 'var(--color-primary)' }}>
@@ -396,7 +396,7 @@ export default function Home() {
 
       {/* CTA */}
       <SectionWrapper>
-        <div className="max-w-[72rem] mx-auto px-6 py-14">
+        <div className="max-w-[60rem] mx-auto px-6 py-14">
           <div className="rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
             style={{ background: 'var(--color-layer-1)', border: '1px solid var(--color-border)' }}>
             <div className="max-w-[32rem]">

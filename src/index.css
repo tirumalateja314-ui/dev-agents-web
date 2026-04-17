@@ -50,7 +50,7 @@
   --shadow-xl: 0 8px 16px hsla(228, 18%, 7%, 0.08), 0 16px 48px hsla(228, 18%, 7%, 0.12);
 
   /* Layout */
-  --max-content: 72rem;
+  --max-content: 60rem;
   --sidebar-width: 260px;
   --prose-width: 48rem;
 
