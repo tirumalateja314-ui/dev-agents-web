@@ -46,7 +46,7 @@ const INSTALL_STEPS = [
     n: 1,
     title: 'Get the DevAgent files',
     body: 'Download or clone the DevAgent repository. You need the .github/ folder — specifically .github/agents/ and .github/prompts/.',
-    code: 'git clone https://github.com/your-org/devagent\n# or download the ZIP and extract it',
+    code: 'git clone https://github.com/tirumalateja314-ui/dev-agents\n# or download the ZIP and extract it',
     callout: null,
   },
   {
