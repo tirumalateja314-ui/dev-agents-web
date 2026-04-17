@@ -106,7 +106,7 @@ export default function Home() {
     <div>
 
       {/* HERO */}
-      <section className="max-w-[82rem] mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-[72rem] mx-auto px-6 pt-16 pb-12">
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-14 items-center">
           <div>
             <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35 }}>
@@ -117,14 +117,14 @@ export default function Home() {
               </span>
             </motion.div>
 
-            <motion.h1 className="text-[2.8rem] lg:text-[3.6rem] font-bold leading-[1.04] mb-6"
+            <motion.h1 className="text-[2rem] lg:text-[2.6rem] font-bold leading-[1.08] mb-5"
               style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.038em', color: 'var(--color-primary)' }}
               initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.38, delay: 0.05 }}>
               Stop doing<br />
               <span style={{ color: 'var(--color-accent)' }}>everyone's job.</span>
             </motion.h1>
 
-            <motion.p className="text-[1.05rem] leading-[1.7] mb-4 max-w-[32rem]"
+            <motion.p className="text-base leading-relaxed mb-4 max-w-[30rem]"
               style={{ color: 'var(--color-secondary)' }}
               initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.1 }}>
               You're already the product manager, the architect, the developer, the QA, and the reviewer — all at once.
@@ -173,7 +173,7 @@ export default function Home() {
 
       {/* STATS BAR */}
       <SectionWrapper>
-        <div className="max-w-[82rem] mx-auto px-6">
+        <div className="max-w-[72rem] mx-auto px-6">
           <div className="rounded-xl border py-5 px-8"
             style={{ borderColor: 'var(--color-border)', background: 'var(--color-layer-1)' }}>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
@@ -192,11 +192,11 @@ export default function Home() {
       {/* PAIN SECTION */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[82rem] mx-auto px-6 py-20">
-            <div className="max-w-[36rem] mb-12">
+          <div className="max-w-[72rem] mx-auto px-6 py-14">
+            <div className="max-w-[34rem] mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE REAL COST</p>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-4 leading-tight"
+              <h2 className="text-xl lg:text-2xl font-bold mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
                 Every feature ships with invisible overhead you pay alone
               </h2>
@@ -227,11 +227,11 @@ export default function Home() {
       {/* SCENARIOS */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[82rem] mx-auto px-6 py-20">
-            <div className="max-w-[36rem] mb-12">
+          <div className="max-w-[72rem] mx-auto px-6 py-14">
+            <div className="max-w-[34rem] mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>SOUND FAMILIAR?</p>
-              <h2 className="text-2xl lg:text-3xl font-bold leading-tight"
+              <h2 className="text-xl lg:text-2xl font-bold leading-tight"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>This is how it changes</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-5">
@@ -263,11 +263,11 @@ export default function Home() {
       {/* HOW IT WORKS */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[82rem] mx-auto px-6 py-20">
-            <div className="max-w-[36rem] mb-12">
+          <div className="max-w-[72rem] mx-auto px-6 py-14">
+            <div className="max-w-[34rem] mb-10">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE PIPELINE</p>
-              <h2 className="text-2xl lg:text-3xl font-bold leading-tight"
+              <h2 className="text-xl lg:text-2xl font-bold leading-tight"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
                 One sentence in. Reviewed code out.
               </h2>
@@ -309,12 +309,12 @@ export default function Home() {
       {/* AGENTS */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[82rem] mx-auto px-6 py-20">
-            <div className="flex items-end justify-between mb-10">
+          <div className="max-w-[72rem] mx-auto px-6 py-14">
+            <div className="flex items-end justify-between mb-8">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                   style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE TEAM</p>
-                <h2 className="text-2xl font-bold leading-tight mb-2"
+                <h2 className="text-xl font-bold leading-tight mb-2"
                   style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
                   8 specialists. You talk to one.
                 </h2>
@@ -339,12 +339,12 @@ export default function Home() {
       {/* COMPARISON */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
-          <div className="max-w-[82rem] mx-auto px-6 py-20">
+          <div className="max-w-[72rem] mx-auto px-6 py-14">
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                   style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>THE DIFFERENCE</p>
-                <h2 className="text-2xl lg:text-3xl font-bold leading-tight mb-4"
+                <h2 className="text-xl lg:text-2xl font-bold leading-tight mb-4"
                   style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
                   Not a chat window. A pipeline.
                 </h2>
@@ -376,9 +376,9 @@ export default function Home() {
       {/* QUOTE */}
       <SectionWrapper>
         <div className="border-b" style={{ borderColor: 'var(--color-border)', background: 'var(--color-layer-1)' }}>
-          <div className="max-w-[82rem] mx-auto px-6 py-16 text-center">
-            <div className="max-w-[42rem] mx-auto">
-              <p className="text-2xl lg:text-3xl font-bold leading-snug mb-6"
+          <div className="max-w-[72rem] mx-auto px-6 py-12 text-center">
+            <div className="max-w-[40rem] mx-auto">
+              <p className="text-xl lg:text-2xl font-bold leading-snug mb-5"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.025em', color: 'var(--color-primary)' }}>
                 "You type one sentence. DevAgent handles everything between that sentence and a reviewed, tested PR."
               </p>
@@ -396,13 +396,13 @@ export default function Home() {
 
       {/* CTA */}
       <SectionWrapper>
-        <div className="max-w-[82rem] mx-auto px-6 py-20">
-          <div className="rounded-2xl p-10 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+        <div className="max-w-[72rem] mx-auto px-6 py-14">
+          <div className="rounded-2xl p-8 lg:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
             style={{ background: 'var(--color-layer-1)', border: '1px solid var(--color-border)' }}>
             <div className="max-w-[32rem]">
               <p className="text-xs font-semibold uppercase tracking-widest mb-3"
                 style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>READY?</p>
-              <h2 className="text-2xl lg:text-3xl font-bold mb-3 leading-tight"
+              <h2 className="text-xl lg:text-2xl font-bold mb-3 leading-tight"
                 style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
                 Set it up in 5 minutes.<br />Run your first task today.
               </h2>
