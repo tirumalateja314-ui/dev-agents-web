@@ -70,7 +70,7 @@ export default function GlobalRules() {
           Reference
         </p>
         <h1 className="text-3xl font-bold mb-4" style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
-          The 10 global rules
+          The 12 global rules
         </h1>
         <p className="text-base leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
           Every agent follows these rules at all times. Understanding them explains why agents behave the way they do. Click any rule to expand the full explanation.

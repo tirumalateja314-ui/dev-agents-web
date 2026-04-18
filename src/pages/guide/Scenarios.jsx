@@ -17,6 +17,7 @@ const SCENARIOS = [
       { label: 'Architect creates plan', actor: 'Architect', color: '#D48A2C' },
       { label: 'You approve the plan (Gate 1)', actor: 'You', color: 'var(--color-accent)', isGate: true },
       { label: 'Developer writes code', actor: 'Developer', color: '#2EBD78' },
+      { label: 'Reviewer quick-checks alignment (R12)', actor: 'Reviewer', color: '#B84FA0' },
       { label: 'You approve the code (Gate 2)', actor: 'You', color: 'var(--color-accent)', isGate: true },
       { label: 'Tester runs all tests — pass', actor: 'Tester', color: '#D44458' },
       { label: 'Reviewer approves code quality', actor: 'Reviewer', color: '#B84FA0' },
@@ -33,6 +34,7 @@ const SCENARIOS = [
     description: 'Tester finds a failing test. Coordinator loops back to Developer for a targeted fix, then re-runs testing. No full restart needed.',
     steps: [
       { label: 'Development complete', actor: 'Developer', color: '#2EBD78' },
+      { label: 'Reviewer quick-checks alignment (R12)', actor: 'Reviewer', color: '#B84FA0' },
       { label: 'You approve code (Gate 2)', actor: 'You', color: 'var(--color-accent)', isGate: true },
       { label: 'Tester finds failing tests', actor: 'Tester', color: '#D44458', isWarning: true },
       { label: 'Coordinator notifies you of failures', actor: 'Coordinator', color: 'var(--color-accent)' },

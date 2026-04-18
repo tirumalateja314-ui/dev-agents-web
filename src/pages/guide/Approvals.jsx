@@ -26,11 +26,12 @@ const GATES = [
     name: 'Code Approval',
     phase: 'After Phase 4 — Development',
     color: 'var(--color-agent-developer)',
-    whatYouSee: 'The Developer presents a summary of what was built: files changed, key decisions made, any deviations from the plan (with reasons), and a brief "what to test" section.',
+    whatYouSee: 'The Developer presents a summary of what was built: files changed, key decisions made, any deviations from the plan (with reasons). Before you see this, the Reviewer has already done a quick alignment check (R12) to catch incomplete work.',
     whatToCheck: [
       'Does the summary match your original requirements?',
       'Were there any surprises (unexpected decisions)?',
       'Does the scope seem right — not too much, not too little?',
+      'Reviewer has verified alignment — but trust your own judgment too',
     ],
     sayToApprove: ['yes', 'approve', 'looks good', 'proceed to testing'],
     sayToReject: 'Revert [X] / Change [Y] / I didn\'t want [Z]',

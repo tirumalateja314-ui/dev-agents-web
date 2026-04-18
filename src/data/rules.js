@@ -1,4 +1,4 @@
-// Global rules data — the 10 rules all agents follow
+// Global rules data — the 12 rules all agents follow
 
 export const rules = [
   {
@@ -70,6 +70,20 @@ export const rules = [
     shortDesc: 'Getting it right matters more than getting it fast.',
     fullDesc: 'Agents prioritize correctness, security, and maintainability over speed. They follow the plan, write tests, review code, and only proceed when confident in quality.',
     example: 'The Reviewer flags a security issue even though fixing it means going back to development.',
+  },
+  {
+    number: 11,
+    title: 'Respect Per-Path Scope Restrictions',
+    shortDesc: 'Agents only touch files within their assigned scope.',
+    fullDesc: 'When the user specifies a scope (like a folder or file path), agents restrict all file operations to that scope. They will not read, write, or modify files outside the stated boundaries unless explicitly allowed.',
+    example: 'If the scope is src/auth/, the Developer won\'t modify files in src/dashboard/ even if they seem related.',
+  },
+  {
+    number: 12,
+    title: 'Research Protocol — Ask the Researcher When Stuck',
+    shortDesc: 'Invoke the Researcher for genuine unknowns, not for things you already know.',
+    fullDesc: 'Agents invoke the Researcher when they hit version-specific errors, need niche library docs, or must verify security concerns. They do NOT research standard language features, common frameworks, or well-known patterns they already understand.',
+    example: 'The Developer hits a breaking change between v3 and v4 of a library and can\'t resolve it — so the Researcher is called. But for writing a standard React component, no research is needed.',
   },
 ];
 
