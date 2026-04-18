@@ -3,6 +3,7 @@ import {
   ArrowRight, ShieldCheck, Eye,
   GitBranch, Gear, Terminal, CheckCircle,
   Cpu, ClipboardText, TestTube, MagnifyingGlass, GitPullRequest, Warning, ArrowSquareOut,
+  Database, Pause, Play, Archive, GitFork, UsersThree,
 } from '@phosphor-icons/react';
 import { motion } from 'framer-motion';
 import { agents } from '../data/agents';
@@ -113,7 +114,7 @@ export default function Home() {
               <span className="inline-flex items-center gap-2 text-xs font-medium px-3 py-1 rounded-full mb-6"
                 style={{ background: 'var(--color-accent-muted)', color: 'var(--color-accent)', border: '1px solid rgba(240, 147, 26, 0.25)', fontFamily: 'var(--font-mono)' }}>
                 <Terminal size={12} weight="bold" />
-                9 agents &nbsp;·&nbsp; inside VS Code &nbsp;·&nbsp; free to use
+                Research Preview &nbsp;·&nbsp; 9 agents &nbsp;·&nbsp; open to contributions
               </span>
             </motion.div>
 
@@ -388,6 +389,86 @@ export default function Home() {
                   DevAgent
                 </span>
                 <span className="text-sm" style={{ color: 'var(--color-tertiary)' }}>— the whole point</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* CONTEXT MANAGEMENT */}
+      <SectionWrapper>
+        <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
+            <div className="max-w-[34rem] mb-10">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>BUILT-IN MEMORY</p>
+              <h2 className="text-xl lg:text-2xl font-bold leading-tight mb-3"
+                style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
+                Context that survives between sessions
+              </h2>
+              <p className="text-sm leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
+                Every task runs through a state machine backed by a CLI script. Context files track
+                requirements, decisions, code changes, and test results — so you never lose progress.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                { icon: <Database size={18} weight="duotone" />, title: 'Checkpoints at every phase', desc: 'Snapshot your progress after each approval gate. Roll back anytime with one command.' },
+                { icon: <Pause size={18} weight="duotone" />, title: 'Suspend and resume', desc: 'Pause a task, close VS Code, come back days later. The system picks up exactly where you left off.' },
+                { icon: <Archive size={18} weight="duotone" />, title: 'Searchable task history', desc: 'Every completed task is archived with a manifest. Search past work by keyword or tag.' },
+                { icon: <Play size={18} weight="duotone" />, title: '12 CLI commands', desc: 'setup, init, status, validate, checkpoint, rollback, archive, search, history, suspend, resume, compact.' },
+                { icon: <CheckCircle size={18} weight="duotone" />, title: 'Auto-validation', desc: 'Before any agent delegation, the system checks file consistency, staleness, and prerequisites.' },
+                { icon: <Gear size={18} weight="duotone" />, title: 'Context profiles', desc: 'Choose minimal (4 files) for quick fixes or extended (10 files) for large refactors. You pick the overhead.' },
+              ].map(({ icon, title, desc }) => (
+                <div key={title} className="rounded-xl p-5"
+                  style={{ background: 'var(--color-layer-1)', border: '1px solid var(--color-border)' }}>
+                  <div className="flex items-center gap-2.5 mb-3">
+                    <span style={{ color: 'var(--color-accent)' }}>{icon}</span>
+                    <p className="text-sm font-semibold" style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-heading)' }}>{title}</p>
+                  </div>
+                  <p className="text-xs leading-relaxed" style={{ color: 'var(--color-secondary)' }}>{desc}</p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-8">
+              <Link to="/how-it-works/context-management" className="inline-flex items-center gap-2 text-sm no-underline"
+                style={{ color: 'var(--color-accent)' }}>
+                Context management deep dive <ArrowRight size={13} weight="bold" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* CONTRIBUTE */}
+      <SectionWrapper>
+        <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
+            <div className="rounded-xl p-6 lg:p-8 flex flex-col lg:flex-row items-start lg:items-center gap-8"
+              style={{ background: 'var(--color-accent-muted)', border: '1px solid rgba(240, 147, 26, 0.2)' }}>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <GitFork size={16} weight="bold" style={{ color: 'var(--color-accent)' }} />
+                  <span className="text-xs font-semibold uppercase tracking-widest"
+                    style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>RESEARCH PREVIEW</span>
+                </div>
+                <h3 className="text-lg font-bold mb-2"
+                  style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.02em', color: 'var(--color-primary)' }}>
+                  This is a research preview — we'd love your help
+                </h3>
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
+                  DevAgent is an open experiment in multi-agent development workflows. It's evolving fast
+                  and we're building it in the open. Try it, break it, tell us what works and what doesn't.
+                  Every issue, idea, or PR helps shape where this goes.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+                <a href="https://github.com/tirumalateja314-ui/dev-agents" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-md text-sm font-semibold no-underline transition-all duration-150 hover:brightness-110"
+                  style={{ background: 'var(--color-accent)', color: '#fff' }}>
+                  <UsersThree size={14} weight="bold" />
+                  Contribute on GitHub
+                </a>
               </div>
             </div>
           </div>

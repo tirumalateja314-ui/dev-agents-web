@@ -12,12 +12,13 @@ const CONTEXT_FILES = [
   { file: 'codebase-intel.md', writtenBy: 'Codebase Explorer', readBy: ['Architect Planner', 'Developer', 'Tester', 'Reviewer', 'Researcher'], persists: true, desc: 'Project structure, patterns, conventions, and tech stack. This file survives across tasks.' },
   { file: 'requirements.md', writtenBy: 'Story Analyst', readBy: ['Architect Planner', 'Developer', 'Tester', 'Reviewer', 'Researcher'], persists: false, desc: 'Structured requirements with acceptance criteria extracted from your task description.' },
   { file: 'implementation-plan.md', writtenBy: 'Architect Planner', readBy: ['Developer', 'Tester', 'Reviewer'], persists: false, desc: 'File-by-file plan: what to create, what to modify, which patterns to use.' },
-  { file: 'development-log.md', writtenBy: 'Developer', readBy: ['Tester', 'Reviewer', 'Coordinator'], persists: false, desc: 'What was built: files created/modified, decisions made, edge cases handled.' },
+  { file: 'code-changes.md', writtenBy: 'Developer', readBy: ['Tester', 'Reviewer', 'Coordinator'], persists: false, desc: 'What was built: files created/modified, decisions made, edge cases handled.' },
   { file: 'test-results.md', writtenBy: 'Tester', readBy: ['Reviewer', 'Coordinator'], persists: false, desc: 'All tests written, coverage summary, edge cases tested, any failures found.' },
   { file: 'review-report.md', writtenBy: 'Reviewer', readBy: ['Coordinator', 'Developer'], persists: false, desc: 'Code review verdict: issues found (if any), severity, fix suggestions.' },
   { file: 'research-findings.md', writtenBy: 'Researcher', readBy: ['All agents'], persists: false, desc: 'Web research findings — sourced, rated, and verified against our tech stack. Accumulates across phases.' },
-  { file: 'git-operations.md', writtenBy: 'Git Manager', readBy: ['Coordinator'], persists: false, desc: 'Branch name, commits, push status, MR link and description.' },
+  { file: 'git-status.md', writtenBy: 'Git Manager', readBy: ['Coordinator'], persists: false, desc: 'Branch name, commits, push status, MR link and description.' },
   { file: 'task-status.md', writtenBy: 'Coordinator', readBy: ['All agents'], persists: false, desc: 'Current phase, pending approvals, overall task progress. Your dashboard.' },
+  { file: 'decisions-and-blockers.md', writtenBy: 'Coordinator', readBy: ['All agents'], persists: false, desc: 'Decision log, open blockers, escalation history. Tracks every user choice.' },
 ];
 
 // ── Approval gates ────────────────────────────────────────────────────────────

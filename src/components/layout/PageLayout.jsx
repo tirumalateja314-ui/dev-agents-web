@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
+import ResearchBanner from '../utility/ResearchBanner';
 import SearchModal from '../utility/SearchModal';
 
 export default function PageLayout({ children, theme, toggleTheme }) {
@@ -54,6 +55,7 @@ export default function PageLayout({ children, theme, toggleTheme }) {
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--color-layer-0)]">
+      <ResearchBanner />
       <Navbar
         theme={theme}
         toggleTheme={toggleTheme}

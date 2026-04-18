@@ -21,6 +21,10 @@ export default function Footer() {
               Your AI development team, inside VS Code.
               9 agents. 8 phases. Full control.
             </p>
+            <p className="text-xs text-[var(--color-tertiary)] mt-3 leading-relaxed"
+              style={{ fontFamily: 'var(--font-mono)' }}>
+              Research Preview — open to contributions
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -68,7 +72,7 @@ export default function Footer() {
         <div className="mt-10 pt-6 border-t border-[var(--color-border)]
                         flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[var(--color-tertiary)]">
-            &copy; {new Date().getFullYear()} DevAgent. All rights reserved.
+            &copy; {new Date().getFullYear()} DevAgent. Research preview — open source.
           </p>
         </div>
       </div>
