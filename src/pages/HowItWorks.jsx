@@ -9,8 +9,8 @@ import FlowDiagram from '../components/interactive/FlowDiagram';
 
 // ── Context files catalogue ───────────────────────────────────────────────────
 const CONTEXT_FILES = [
-  { file: 'codebase-intel.md', writtenBy: 'Codebase Explorer', readBy: ['Architect Planner', 'Developer', 'Tester', 'Reviewer'], persists: true, desc: 'Project structure, patterns, conventions, and tech stack. This file survives across tasks.' },
-  { file: 'requirements.md', writtenBy: 'Story Analyst', readBy: ['Architect Planner', 'Developer', 'Tester', 'Reviewer'], persists: false, desc: 'Structured requirements with acceptance criteria extracted from your task description.' },
+  { file: 'codebase-intel.md', writtenBy: 'Codebase Explorer', readBy: ['Architect Planner', 'Developer', 'Tester', 'Reviewer', 'Researcher'], persists: true, desc: 'Project structure, patterns, conventions, and tech stack. This file survives across tasks.' },
+  { file: 'requirements.md', writtenBy: 'Story Analyst', readBy: ['Architect Planner', 'Developer', 'Tester', 'Reviewer', 'Researcher'], persists: false, desc: 'Structured requirements with acceptance criteria extracted from your task description.' },
   { file: 'implementation-plan.md', writtenBy: 'Architect Planner', readBy: ['Developer', 'Tester', 'Reviewer'], persists: false, desc: 'File-by-file plan: what to create, what to modify, which patterns to use.' },
   { file: 'development-log.md', writtenBy: 'Developer', readBy: ['Tester', 'Reviewer', 'Coordinator'], persists: false, desc: 'What was built: files created/modified, decisions made, edge cases handled.' },
   { file: 'test-results.md', writtenBy: 'Tester', readBy: ['Reviewer', 'Coordinator'], persists: false, desc: 'All tests written, coverage summary, edge cases tested, any failures found.' },
@@ -318,7 +318,7 @@ export default function HowItWorks() {
       <div className="grid grid-cols-3 gap-4 mb-12">
         {[
           { n: '8', label: 'Phases' },
-          { n: '8', label: 'Agents' },
+          { n: '9', label: 'Agents' },
           { n: '4', label: 'Approval gates' },
         ].map((s) => (
           <div key={s.label} className="rounded-lg p-4 text-center"

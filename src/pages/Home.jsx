@@ -350,7 +350,7 @@ export default function Home() {
                 </h2>
                 <p className="text-sm leading-relaxed mb-8" style={{ color: 'var(--color-secondary)' }}>
                   Chat AI gives you a box to type in. DevAgent gives you a structured workflow —
-                  analyst, architect, developer, tester, reviewer — each running at the right time,
+                  analyst, architect, developer, tester, reviewer, researcher — each running at the right time,
                   in the right order. Quality is built in.
                 </p>
                 <div className="space-y-3">

@@ -63,7 +63,7 @@ export default function NonTechPlaybook() {
       <div className="rounded-xl p-5 mb-10"
            style={{ background: 'var(--color-accent-muted)', border: '1px solid rgba(240,147,26,0.2)' }}>
         <p className="text-sm leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
-          <strong style={{ color: 'var(--color-primary)' }}>The rule:</strong> You only talk to the Coordinator. All 7 other agents work behind the scenes. You only need to review summaries, answer questions, and approve checkpoints — no code reading required.
+          <strong style={{ color: 'var(--color-primary)' }}>The rule:</strong> You only talk to the Coordinator. All 8 other agents work behind the scenes. You only need to review summaries, answer questions, and approve checkpoints — no code reading required.
         </p>
       </div>
 

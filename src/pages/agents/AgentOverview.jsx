@@ -30,7 +30,7 @@ export default function AgentOverview() {
           KEY
         </span>
         <span style={{ color: 'var(--color-secondary)' }}>
-          <strong style={{ color: 'var(--color-primary)' }}>You only talk to the Coordinator.</strong> It reads your request, decides which agents to run and in what order, passes information between them, and brings you the results. The other 7 agents work silently in the background.
+          <strong style={{ color: 'var(--color-primary)' }}>You only talk to the Coordinator.</strong> It reads your request, decides which agents to run and in what order, passes information between them, and brings you the results. The other 8 agents work silently in the background.
         </span>
       </div>
 
