@@ -27,6 +27,7 @@ export const commands = [
     items: [
       { command: 'What\'s the status?', description: 'Get a full progress report on the current task' },
       { command: 'Where are we?', description: 'Quick check on current phase' },
+      { command: 'Where did we leave off?', description: 'Resume a task — shows phase-by-phase progress with time elapsed' },
       { command: 'Show me [context file]', description: 'View any context file content directly' },
       { command: 'Why did you choose this approach?', description: 'Ask an agent to explain its reasoning' },
       { command: 'Can you explain that more simply?', description: 'Get a plainer explanation of something complex' },

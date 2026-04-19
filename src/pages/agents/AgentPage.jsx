@@ -27,7 +27,7 @@ Type "approve" to proceed to development, or describe changes.`,
       "Always use the phase indicator [Phase X/8] to know exactly where you are.",
       "Say \"What's the status?\" at any time for a full progress report.",
       "Say \"Go with your recommendations\" to fast-track Q&A sessions.",
-      "If you close VS Code mid-task, the Coordinator picks up where it left off — just say \"Where did we leave off?\"",
+      "If you close your editor mid-task, the Coordinator picks up where it left off — just say \"Where did we leave off?\"",
     ],
     edgeCases: [
       { scenario: 'You ask a vague question mid-task', response: 'Coordinator answers without disrupting the pipeline, then continues from the current phase.' },

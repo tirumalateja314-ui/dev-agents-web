@@ -26,6 +26,7 @@ import BugFix from './pages/examples/BugFix';
 import NewProject from './pages/examples/NewProject';
 import RequirementChange from './pages/examples/RequirementChange';
 import ContextManagement from './pages/how-it-works/ContextManagement';
+import AutomationScripts from './pages/how-it-works/AutomationScripts';
 
 export default function App() {
   const { theme, toggleTheme, isDark } = useTheme();
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/how-it-works/context-files" element={<HowItWorks />} />
           <Route path="/how-it-works/approval-gates" element={<HowItWorks />} />
           <Route path="/how-it-works/context-management" element={<ContextManagement />} />
+          <Route path="/how-it-works/automation-scripts" element={<AutomationScripts />} />
           <Route path="/agents" element={<AgentOverview />} />
           <Route path="/agents/:agentId" element={<AgentPage />} />
           <Route path="/guide" element={<UserGuide />} />

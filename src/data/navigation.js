@@ -20,6 +20,7 @@ export const navigation = [
       { title: 'Context Files', path: '/how-it-works/context-files' },
       { title: 'Approval Gates', path: '/how-it-works/approval-gates' },
       { title: 'Context Management', path: '/how-it-works/context-management' },
+      { title: 'Automation Scripts', path: '/how-it-works/automation-scripts' },
     ],
   },
   {

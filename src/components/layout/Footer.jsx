@@ -18,7 +18,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm text-[var(--color-tertiary)] leading-relaxed">
-              Your AI development team, inside VS Code.
+              Your AI development team, inside your editor.
               9 agents. 8 phases. Full control.
             </p>
             <p className="text-xs text-[var(--color-tertiary)] mt-3 leading-relaxed"

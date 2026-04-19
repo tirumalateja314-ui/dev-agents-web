@@ -9,15 +9,15 @@ import { initializeScript } from '../data/chatExamples';
 const PREREQS = [
   {
     id: 'vscode',
-    label: 'VS Code installed',
-    detail: 'Download from code.visualstudio.com — free, works on Windows, Mac, Linux.',
+    label: 'A supported IDE with GitHub Copilot',
+    detail: 'VS Code, IntelliJ IDEA, PyCharm, WebStorm, GoLand, Rider, or any JetBrains IDE — plus Eclipse and Xcode.',
     link: 'https://code.visualstudio.com',
     linkLabel: 'Download VS Code',
   },
   {
     id: 'copilot',
     label: 'GitHub Copilot extension with active subscription',
-    detail: 'Install from the VS Code Extensions panel (Ctrl+Shift+X). Search "GitHub Copilot". Requires a Copilot subscription (free tier works for individuals).',
+    detail: 'Install from your IDE\'s extension marketplace. Search "GitHub Copilot". Requires a Copilot subscription (free tier works for individuals).',
     link: 'https://marketplace.visualstudio.com/items?itemName=GitHub.copilot',
     linkLabel: 'Install Copilot',
   },
@@ -58,17 +58,17 @@ const INSTALL_STEPS = [
   },
   {
     n: 3,
-    title: 'Open the project in VS Code',
-    body: 'Open the folder in VS Code (File → Open Folder, or drag and drop). The agents load from .github/agents/ automatically — no extension or plugin install needed.',
+    title: 'Open the project in your IDE',
+    body: 'Open the folder in your IDE. The agents load from .github/agents/ automatically — no extra extension or plugin install needed beyond GitHub Copilot.',
     code: 'code your-project/',
     callout: null,
   },
   {
     n: 4,
     title: 'Verify Coordinator appears in Copilot Chat',
-    body: 'Open Copilot Chat (Ctrl+Alt+I). Click the "@" button or type "@" to see available agents. You should see "Coordinator" in the list.',
+    body: 'Open Copilot Chat in your IDE. Click the agents dropdown to see available agents. You should see "Coordinator" in the list.',
     code: null,
-    callout: { type: 'warning', text: 'If Coordinator is missing: make sure .github/agents/coordinator.md exists in your project root, not in a subfolder.' },
+    callout: { type: 'warning', text: 'If Coordinator is missing: make sure .github/agents/coordinator.md exists in your project root, not in a subfolder. Restart your IDE if needed.' },
   },
 ];
 
@@ -214,7 +214,7 @@ export default function GettingStarted() {
         </h1>
         <p className="text-base leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
           Install takes under 5 minutes. No build steps, no plugins, no configuration.
-          Just copy a folder and open VS Code.
+          Just copy a folder and open your IDE.
         </p>
       </div>
 

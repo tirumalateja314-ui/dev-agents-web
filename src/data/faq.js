@@ -4,7 +4,7 @@ export const faq = [
   {
     id: 'coordinator-missing',
     question: 'Coordinator doesn\'t appear in the Copilot Chat dropdown',
-    answer: 'Make sure the file coordinator.agent.md is placed in .github/agents/ at the root of your project. Restart VS Code if needed.',
+    answer: 'Make sure the file coordinator.agent.md is placed in .github/agents/ at the root of your project. Restart your IDE if needed.',
     category: 'setup',
   },
   {
@@ -45,8 +45,8 @@ export const faq = [
   },
   {
     id: 'close-vscode',
-    question: 'What if I close VS Code in the middle of a task?',
-    answer: 'Context files persist on disk. When you reopen VS Code, say "What\'s the status?" and the Coordinator will read the context files and resume from where you left off.',
+    question: 'What if I close my editor in the middle of a task?',
+    answer: 'Context files persist on disk. When you reopen your IDE, say "What\'s the status?" and the Coordinator will read the context files and resume from where you left off.',
     category: 'troubleshooting',
   },
   {

@@ -27,7 +27,7 @@ const SECTIONS = [
     to: '/guide/troubleshooting',
     icon: Question,
     title: 'Troubleshooting & FAQ',
-    description: 'Agent stuck? Confused by a question? Closing VS Code mid-task? Find answers here.',
+    description: 'Agent stuck? Confused by a question? Closing your editor mid-task? Find answers here.',
     color: 'var(--color-agent-tester)',
   },
 ];

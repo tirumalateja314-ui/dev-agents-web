@@ -32,6 +32,7 @@ const CLI_COMMANDS = [
       { cmd: 'setup', desc: 'Create folder structure and templates (one-time)', when: 'First time in a project' },
       { cmd: 'init <name> --profile <p>', desc: 'Start a new task with a context profile', when: 'New task accepted' },
       { cmd: 'status', desc: 'Show current task state as JSON', when: 'Every conversation start' },
+      { cmd: 'progress', desc: 'Show phase-by-phase status with time elapsed and blockers', when: 'When resuming a task' },
     ],
   },
   {
@@ -314,7 +315,7 @@ export default function ContextManagement() {
         <div className="space-y-3">
           {[
             {
-              scenario: 'You close VS Code mid-task',
+              scenario: 'You close your editor mid-task',
               response: 'Next conversation, status detects "active" state — asks you to resume, abandon, or review.',
             },
             {
@@ -369,7 +370,15 @@ export default function ContextManagement() {
           <pre className="m-0 whitespace-pre">
 {`.github/
 ├── scripts/
-│   └── context-tool.js          ← CLI script (all mechanics)
+│   ├── context-tool.js          ← CLI script (all mechanics)
+│   ├── convention-scanner.js    ← Convention detection
+│   ├── pre-impl-check.js       ← Pre-implementation readiness
+│   ├── requirements-tracker.js  ← AC ↔ test traceability
+│   ├── git-safety-check.js     ← Git state safety
+│   ├── briefing-gen.js         ← Agent delegation briefings
+│   ├── review-prep.js          ← Security & quality pre-scan
+│   ├── codebase-diff.js        ← Incremental scan detection
+│   └── research-cache.js       ← Research deduplication
 └── context/
     ├── _templates/              ← 9 templates (copied per task)
     ├── task-status.md           ← Current task state
@@ -397,6 +406,7 @@ export default function ContextManagement() {
         <div className="grid sm:grid-cols-2 gap-3">
           {[
             { to: '/how-it-works/context-files', label: 'Context Files', desc: 'What each file contains and who writes it.' },
+            { to: '/how-it-works/automation-scripts', label: 'Automation Scripts', desc: 'The 8 scripts that agents run automatically.' },
             { to: '/how-it-works/phases', label: 'The 8 Phases', desc: 'How tasks move through the pipeline.' },
             { to: '/agents/coordinator', label: 'Coordinator Agent', desc: 'The agent that triggers all context commands.' },
             { to: '/guide/scenarios', label: 'Common Scenarios', desc: 'See the context system in action.' },

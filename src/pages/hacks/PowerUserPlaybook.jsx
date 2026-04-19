@@ -28,7 +28,7 @@ const TIPS = [
     icon: FolderOpen,
     color: '#24A89C',
     items: [
-      { tip: 'Read context files directly', detail: 'Open .github/context/ in VS Code — codebase-intel.md, requirements.md, implementation-plan.md are all readable.' },
+      { tip: 'Read context files directly', detail: 'Open .github/context/ in your editor — codebase-intel.md, requirements.md, implementation-plan.md are all readable.' },
       { tip: 'Check what agents know', detail: '"Show me the current requirements" → Coordinator reads requirements.md and shows you exactly what agents are working from.' },
       { tip: 'codebase-intel.md persists', detail: 'This file survives between tasks. If your project changes significantly, say "Re-scan the codebase" to update it.' },
     ],

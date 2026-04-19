@@ -89,7 +89,7 @@ export default function AgentOverview() {
           context file in <code className="text-xs px-1.5 py-0.5 rounded"
           style={{ background: 'var(--color-layer-2)' }}>.github/context/</code>.
           The next agent reads those files before starting work. This is how they stay in sync
-          — and why you can close VS Code mid-task and pick up exactly where you left off.
+          — and why you can close your editor mid-task and pick up exactly where you left off.
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {[

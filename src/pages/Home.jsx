@@ -3,7 +3,7 @@ import {
   ArrowRight, ShieldCheck, Eye,
   GitBranch, Gear, Terminal, CheckCircle,
   Cpu, ClipboardText, TestTube, MagnifyingGlass, GitPullRequest, Warning, ArrowSquareOut,
-  Database, Pause, Play, Archive, GitFork, UsersThree,
+  Database, Pause, Play, Archive, GitFork, UsersThree, Desktop, Monitor,
 } from '@phosphor-icons/react';
 import { motion } from 'framer-motion';
 import { agents } from '../data/agents';
@@ -35,7 +35,7 @@ const PAIN_POINTS = [
   {
     icon: <GitPullRequest size={18} weight="duotone" />,
     pain: 'Losing context between sessions',
-    fix: 'Context files persist everything. Restart VS Code, pick up exactly where you left off.',
+    fix: 'Context files persist everything. Reopen your editor, pick up exactly where you left off.',
   },
   {
     icon: <Warning size={18} weight="duotone" />,
@@ -135,7 +135,7 @@ export default function Home() {
             <motion.p className="text-sm leading-relaxed mb-9 max-w-[30rem]"
               style={{ color: 'var(--color-tertiary)' }}
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.35, delay: 0.15 }}>
-              Describe a task. 9 agents handle requirements, architecture, code, tests, and review — inside VS Code, with your approval at every gate.
+              Describe a task. 9 agents handle requirements, architecture, code, tests, and review — inside your editor, with your approval at every gate.
             </motion.p>
 
             <motion.div className="flex flex-wrap items-center gap-3 mb-10"
@@ -155,7 +155,7 @@ export default function Home() {
 
             <motion.div className="flex flex-wrap items-center gap-5"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.4, delay: 0.25 }}>
-              {['No npm install', 'No plugins', 'Works on any codebase', 'Free to use'].map((s) => (
+              {['No npm install', 'No plugins', 'Works on any codebase', 'Any IDE with Copilot'].map((s) => (
                 <span key={s} className="flex items-center gap-1.5 text-xs" style={{ color: 'var(--color-tertiary)' }}>
                   <CheckCircle size={12} weight="fill" style={{ color: 'var(--color-success)' }} />
                   {s}
@@ -185,6 +185,118 @@ export default function Home() {
                   <span className="text-xs" style={{ color: 'var(--color-tertiary)' }}>{s.label}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* WORKS EVERYWHERE */}
+      <SectionWrapper>
+        <div className="border-b" style={{ borderColor: 'var(--color-border)' }}>
+          <div className="max-w-[60rem] mx-auto px-6 py-14">
+            <div className="text-center mb-10">
+              <p className="text-xs font-semibold uppercase tracking-widest mb-3"
+                style={{ color: 'var(--color-accent)', fontFamily: 'var(--font-mono)' }}>WORKS EVERYWHERE</p>
+              <h2 className="text-xl lg:text-2xl font-bold leading-tight mb-3"
+                style={{ fontFamily: 'var(--font-heading)', letterSpacing: '-0.03em' }}>
+                One system, every IDE
+              </h2>
+              <p className="text-sm leading-relaxed text-center" style={{ color: 'var(--color-secondary)' }}>
+                DevAgent runs on any IDE that supports GitHub Copilot's agent mode.
+                Same <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8em' }}>.agent.md</span> files, same workflow — no adapters, no config changes.
+              </p>
+            </div>
+
+            {/* IDE Grid */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+              {[
+                { name: 'VS Code', status: 'GA', desc: 'Full agent mode + custom agents' },
+                { name: 'IntelliJ IDEA', status: 'Preview', desc: 'Agent mode + custom agents' },
+                { name: 'PyCharm', status: 'Preview', desc: 'Agent mode + custom agents' },
+                { name: 'WebStorm', status: 'Preview', desc: 'Agent mode + custom agents' },
+                { name: 'GoLand', status: 'Preview', desc: 'Agent mode + custom agents' },
+                { name: 'Rider', status: 'Preview', desc: 'Agent mode + custom agents' },
+                { name: 'Eclipse', status: 'Preview', desc: 'Agent mode + custom agents' },
+                { name: 'Xcode', status: 'Preview', desc: 'Agent mode + custom agents' },
+              ].map((ide) => (
+                <motion.div key={ide.name}
+                  className="flex flex-col items-center rounded-xl px-3 py-4"
+                  style={{ background: 'var(--color-layer-1)', border: '1px solid var(--color-border)' }}
+                  whileHover={{ y: -2, borderColor: 'var(--color-accent)' }}
+                  transition={{ duration: 0.15 }}>
+                  <Monitor size={22} weight="duotone" className="mb-2" style={{ color: 'var(--color-accent)' }} />
+                  <p className="text-sm font-semibold leading-tight mb-1" style={{ color: 'var(--color-primary)', fontFamily: 'var(--font-heading)' }}>
+                    {ide.name}
+                  </p>
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full mb-1"
+                    style={{
+                      background: ide.status === 'GA' ? 'rgba(52, 211, 153, 0.15)' : 'var(--color-accent-muted)',
+                      color: ide.status === 'GA' ? 'var(--color-success)' : 'var(--color-accent)',
+                      fontFamily: 'var(--font-mono)',
+                    }}>
+                    {ide.status}
+                  </span>
+                  <p className="text-[11px] leading-snug mt-auto" style={{ color: 'var(--color-tertiary)' }}>{ide.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Feature parity table */}
+            <div className="rounded-xl overflow-x-auto" style={{ border: '1px solid var(--color-border)' }}>
+              <table className="w-full text-xs" style={{ borderCollapse: 'collapse', minWidth: '32rem' }}>
+                <thead>
+                  <tr style={{ background: 'var(--color-layer-2)' }}>
+                    {['Feature', 'VS Code', 'JetBrains IDEs', 'Eclipse / Xcode'].map((h, j) => (
+                      <th key={h}
+                        className={`px-4 py-2.5 font-semibold ${j === 0 ? 'text-left' : 'text-center'}`}
+                        style={{
+                          color: 'var(--color-tertiary)',
+                          fontFamily: 'var(--font-mono)',
+                          borderBottom: '1px solid var(--color-border)',
+                          width: j === 0 ? '40%' : '20%',
+                        }}>
+                        {h}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    ['Agent mode', '✓', '✓', '✓'],
+                    ['Custom .agent.md files', '✓', '✓ Preview', '✓ Preview'],
+                    ['Subagent delegation', '✓', '✓ Preview', '✓ Preview'],
+                    ['Custom instructions', '✓', '✓', '✓'],
+                    ['MCP servers', '✓', '✓', '✓'],
+                    ['Plan mode', '✓', '✓', '—'],
+                    ['context-tool.js CLI', '✓', '✓', '✓'],
+                  ].map(([feat, vsc, jb, ex], i, arr) => (
+                    <tr key={feat}
+                      style={{
+                        background: i % 2 === 0 ? 'var(--color-layer-1)' : 'transparent',
+                        borderBottom: i < arr.length - 1 ? '1px solid var(--color-border)' : 'none',
+                      }}>
+                      <td className="px-4 py-2.5 text-left" style={{ color: 'var(--color-secondary)' }}>{feat}</td>
+                      {[vsc, jb, ex].map((val, j) => (
+                        <td key={j} className="px-4 py-2.5 text-center" style={{
+                          color: val === '✓' ? 'var(--color-success)' :
+                            val.includes?.('Preview') ? 'var(--color-accent)' : 'var(--color-secondary)',
+                          fontWeight: val === '✓' ? 600 : 'normal',
+                        }}>{val}</td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="flex gap-3 items-start rounded-lg px-4 py-3 text-sm mt-6"
+              style={{ background: 'var(--color-layer-2)', border: '1px solid var(--color-border)' }}>
+              <Desktop size={14} weight="bold" style={{ color: 'var(--color-accent)', flexShrink: 0, marginTop: '2px' }} />
+              <span style={{ color: 'var(--color-secondary)', lineHeight: 1.6 }}>
+                <strong style={{ color: 'var(--color-primary)' }}>Also supported:</strong> Android Studio, CLion, DataGrip, DataSpell, PhpStorm, RubyMine, RustRover, Writerside — any JetBrains IDE with the GitHub Copilot plugin.
+                Custom agents are in <strong style={{ color: 'var(--color-accent)' }}>public preview</strong> for JetBrains, Eclipse, and Xcode per{' '}
+                <a href="https://docs.github.com/en/copilot/how-tos/use-copilot-agents/cloud-agent/create-custom-agents" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-accent)', textDecoration: 'underline' }}>GitHub's official docs</a> — features may evolve.
+              </span>
             </div>
           </div>
         </div>
@@ -414,7 +526,7 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 { icon: <Database size={18} weight="duotone" />, title: 'Checkpoints at every phase', desc: 'Snapshot your progress after each approval gate. Roll back anytime with one command.' },
-                { icon: <Pause size={18} weight="duotone" />, title: 'Suspend and resume', desc: 'Pause a task, close VS Code, come back days later. The system picks up exactly where you left off.' },
+                { icon: <Pause size={18} weight="duotone" />, title: 'Suspend and resume', desc: 'Pause a task, close your editor, come back days later. The system picks up exactly where you left off.' },
                 { icon: <Archive size={18} weight="duotone" />, title: 'Searchable task history', desc: 'Every completed task is archived with a manifest. Search past work by keyword or tag.' },
                 { icon: <Play size={18} weight="duotone" />, title: '12 CLI commands', desc: 'setup, init, status, validate, checkpoint, rollback, archive, search, history, suspend, resume, compact.' },
                 { icon: <CheckCircle size={18} weight="duotone" />, title: 'Auto-validation', desc: 'Before any agent delegation, the system checks file consistency, staleness, and prerequisites.' },
@@ -488,7 +600,7 @@ export default function Home() {
                 Set it up in 5 minutes.<br />Run your first task today.
               </h2>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-secondary)' }}>
-                Copy one folder to your project. Open VS Code. Type "Initialize" to @Coordinator.
+                Copy one folder to your project. Open your IDE. Select Coordinator from the agents dropdown.
                 That's your entire setup.
               </p>
             </div>
